@@ -4,35 +4,33 @@ import QtCharts 2.2
 import QtQuick.Layouts 1.0
 
 Page {
-    width: 600
-    height: 400
+//    width: 600
+//    height: 400
     anchors.fill: parent
 
-    leftPadding: -2
+//    leftPadding: -2
 
     title: qsTr("Page 2")
 
-    ColumnLayout{
-        width: parent.width
         Button {
             id: btn
             width: parent.width/3
+            anchors.centerIn: parent
             z:1
             text: qsTr("You are on Page 2.")
-            anchors.centerIn: parent
         }
 
         Image {
             id: image
-//            anchors.fill: parent
-            width: parent.width/3
-//            autoTransform: parent.none
+            anchors.fill: parent
+            anchors.centerIn: parent
+            height: parent.height
 //            antialiasing: true
             fillMode: Image.PreserveAspectFit
 //            clip: true
 //            z: 0
-//            rotation: 0
-            scale: 1/5
+            rotation: 30
+            scale: 1
 //            transformOrigin: Item.Center
             source: "qrc:/img/1.png"
 
@@ -50,13 +48,10 @@ Page {
                 ]
         }
 
-
-    }
-
     Connections {
         target: btn
         onClicked: {
-            console.log("print clicked")
+            console.log("bb")
             if (image.state == "NORMAL")
             {
                 image.state = "CRITICAL"

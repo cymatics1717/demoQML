@@ -13,7 +13,7 @@ ApplicationWindow {
     title: qsTr("Demo")
 
 //    property color backGroundColor : "#394454"
-    property color mainAppColor: "#6fda9c"
+    property color mainAppColor: "#6fda0c"
 //    property color mainTextCOlor: "#f0f0f0"
 //    property color popupBackGroundColor: "#b44"
 //    property color popupTextCOlor: "#ffffff"

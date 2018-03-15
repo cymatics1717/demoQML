@@ -3,35 +3,45 @@ import QtQuick.Controls 2.2
 import QtCharts 2.2
 
 Page {
-    width: 600
-    height: 400
+    id: page
+//    width: 600
+//    height: 400
 
     title: qsTr("Page 1")
 
-    Label {
-        text: qsTr("You are on Page 1.")
-        anchors.centerIn: parent
-    }
-
     Image {
         id: image
-        x: 93
-        y: 73
-        width: 147
-        height: 153
+        x: -158
+        width: 690
+        anchors.rightMargin: 108
+        anchors.bottomMargin: -45
+        anchors.topMargin: -32
+        anchors.right: parent.right
+        anchors.bottom: parent.bottom
+        anchors.top: parent.top
+//        anchors.rightMargin: 110
+//        anchors.bottomMargin: -7
+//        anchors.leftMargin: 7
+//        anchors.topMargin: 16
+        scale: 1/2
         source: "qrc:/img/1.png"
     }
 
     Dial {
         id: dial
-        x: 422
-        y: 94
+        anchors.rightMargin: 5
+        anchors.bottomMargin: 71
+        anchors.leftMargin: 375
+        anchors.topMargin: 107
+        anchors.fill: parent
+        z: 1
+        transformOrigin: Item.Center
     }
 
     ProgressBar {
         id: progressBar
-        x: 246
-        y: 261
+        x: 255
+        y: 72
         value: 0.5
     }
 }

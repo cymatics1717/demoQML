@@ -11,6 +11,14 @@ Page {
     height: 480
     title: qsTr("Stack")
 
+
+    focus: true
+    Keys.onUpPressed: window.y -= 10
+    Keys.onDownPressed: window.y += 10
+    Keys.onLeftPressed: window.x += 10
+    Keys.onRightPressed: window.x -= 10
+
+
     header: ToolBar {
         contentHeight: toolButton.implicitHeight
 
